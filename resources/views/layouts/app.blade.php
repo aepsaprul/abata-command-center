@@ -27,7 +27,7 @@
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
-                        <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+                        <a href="#" class="site_title"><img src="{{ asset('lib/images/logo-daun.png') }}" alt=""> <span class="h6">Hae Hoe Cemerlang</span></a>
                     </div>
 
                     <div class="clearfix"></div>
@@ -35,11 +35,11 @@
                     <!-- menu profile quick info -->
                     <div class="profile clearfix">
                         <div class="profile_pic">
-                            <img src="{{ asset('lib/images/img.jpg') }}" alt="..." class="img-circle profile_img">
+                            <img src="https://abata-printing.com/api/api/karyawan/{{ Auth::user()->master_karyawan_id }}/show" onerror="this.onerror=null; this.src='{{ asset('lib/images/user.png') }}'" class="img-circle profile_img">
                         </div>
                         <div class="profile_info">
-                            <span>Welcome,</span>
-                            <h2>John Doe</h2>
+                            <span>Selamat Datang,</span>
+                            <h2>{{ Auth::user()->name }}</h2>
                         </div>
                     </div>
                     <!-- /menu profile quick info -->
@@ -101,7 +101,7 @@
                         <ul class=" navbar-right">
                             <li class="nav-item dropdown open" style="padding-left: 15px;">
                                 <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                                <img src="{{ asset('lib/images/img.jpg') }}" alt="">John Doe
+                                <img src="https://abata-printing.com/api/api/karyawan/{{ Auth::user()->master_karyawan_id }}/show" onerror="this.onerror=null; this.src='{{ asset('lib/images/user.png') }}'"> {{ Auth::user()->name }}
                                 </a>
                                 <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item"  href="javascript:;"> Profile</a>
